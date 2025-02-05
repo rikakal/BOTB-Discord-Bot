@@ -13,6 +13,11 @@ This is a Discord bot specifically designed for Battle of the Brook (BOTB), whic
 
 *The data parsing can be updated as well to fit the format of your Excel sheet in ``databaseService.js`` line 99.*
 
+## LIMITATIONS
+*Disclaimer: these instructions are for Discord's website current format as of February 5, 2025 -- Discord may change this format in the future. This is also using Discord.js version 14.16.3*
+
+The bot is currently configured to only allow commands from users who have a role that has the "Create Events" permission enabled. Users who are Administrators are able to use the bot commands.
+
 ## SETUP
 Required:
 - Discord account
@@ -35,7 +40,6 @@ CLIENTID=""
 GUILDID=""
 
 ### Discord 
-*Disclaimer: these instructions are for Discord's website currentt format as of February 5, 2025 -- Discord may change this format in the future. This is also using Discord.js version 14.16.3*
 1) Create your Discord bot from the Discord Developer Portal.
 2) Installation > Installation Contexts > Have only Guild Install checked 
 3) Installation > Installation Contexts > Install Link > None
