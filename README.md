@@ -4,6 +4,14 @@ Beedo. 🤖
 ## SUMMARY
 This is a Discord bot specifically designed for Battle of the Brook (BOTB), which is a tournament that runs every semester with 60-80 players, to automate the process of manually creating each individual team role, text channel, and voice channel, and setting the permissions for those channels. All the commands process the data in bulk, i.e.: there are no commands for handling smaller chunks of data or individual teams. 
 
+# Demo
+![](https://github.com/BOTB-Discord-Bot/demo.gif)
+
+## LIMITATIONS
+*Disclaimer: these instructions are for Discord's website current format as of February 5, 2025 -- Discord may change this format in the future. This is also using Discord.js version 14.16.3*
+
+The bot is currently configured to only allow commands from users who have a role that has the "Create Events" permission enabled. Users who are Administrators are able to use the bot commands.
+
 **NOTE:** the mock data this bot was built off was a smaller scale with 2 players for each team. Additionally, the bot expects the Excel sheet to have each player's details in a specific format per column: *Player 1 First Name, Player 1 Last Name, Player 1 Email, Player 1 Discord...*
 
 *Please update any variables with "MAGIC" to fit your needs in:*
@@ -12,11 +20,6 @@ This is a Discord bot specifically designed for Battle of the Brook (BOTB), whic
 - *``playerService.js`` line 2*
 
 *The data parsing can be updated as well to fit the format of your Excel sheet in ``databaseService.js`` line 99.*
-
-## LIMITATIONS
-*Disclaimer: these instructions are for Discord's website current format as of February 5, 2025 -- Discord may change this format in the future. This is also using Discord.js version 14.16.3*
-
-The bot is currently configured to only allow commands from users who have a role that has the "Create Events" permission enabled. Users who are Administrators are able to use the bot commands.
 
 ## SETUP
 Required:
