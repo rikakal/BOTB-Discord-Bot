@@ -5,7 +5,7 @@ Beedo. 🤖
 This is a Discord bot specifically designed for Battle of the Brook (BOTB), which is a tournament that runs every semester with 60-80 players, to automate the process of manually creating each individual team role, text channel, and voice channel, and setting the permissions for those channels. All the commands process the data in bulk, i.e.: there are no commands for handling smaller chunks of data or individual teams. 
 
 # Demo
-![](https://github.com/BOTB-Discord-Bot/demo.gif)
+![](https://github.com/rikakal/BOTB-Discord-Bot/blob/main/demo.gif)
 
 ## LIMITATIONS
 *Disclaimer: these instructions are for Discord's website current format as of February 5, 2025 -- Discord may change this format in the future. This is also using Discord.js version 14.16.3*
