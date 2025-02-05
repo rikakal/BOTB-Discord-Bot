@@ -29,10 +29,15 @@ exports.createChannels = async (guildID, reasoning) => {
         const guild = await client.guilds.fetch(guildID);
         const reason = reasoning;
 
+        // get the bot and check/find its admin role
+        const botMember = guild.members.cache.get(process.env.CLIENTID);
+        const adminRole = botMember.roles.cache.find(role => role.permissions.has("Administrator"));
+        console.log(adminRole);
+
         // create category first, which is where all the channels will populate under
         let textCategory;
         try {
-            textCategory = await this.createCategory(guild, reason);
+            textCategory = await this.createCategory(guild, reason, adminRole.id);
         } catch (error) {
             console.error(`Error creating category:`, error);
             throw new Error(error.message)
@@ -108,7 +113,7 @@ exports.createChannels = async (guildID, reasoning) => {
 }
 
 // *** Context: creates a category ***
-exports.createCategory = async (guild, reason) => {
+exports.createCategory = async (guild, reason, botAdminRoleId) => {
     return await guild.channels.create({
         name: MAGIC_TEXT_CATEGORY_NAME,
         type: ChannelType.GuildCategory,
@@ -119,7 +124,7 @@ exports.createCategory = async (guild, reason) => {
                 deny: [PermissionFlagsBits.ViewChannel], // deny access for everyone
             },
             {
-                id: guild.roles.cache.find(r => r.name === 'BOTB Team Manager'),
+                id: botAdminRoleId,
                 allow: [
                     PermissionFlagsBits.ViewChannel,
                     PermissionFlagsBits.ManageRoles,
